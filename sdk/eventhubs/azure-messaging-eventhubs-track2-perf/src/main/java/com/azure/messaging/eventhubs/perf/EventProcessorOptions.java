@@ -37,6 +37,9 @@ public class EventProcessorOptions extends EventHubsOptions {
     @Parameter(names = {"--batch"}, description = "Use batched receive.")
     private boolean isBatched = false;
 
+    @Parameter(names = {"-pc", "--partitionCount"}, description = "Number of eventhubs partion")
+    private int partitionCount = 1;
+
     /**
      * Gets the consumer group for receiving messages.
      *
@@ -107,5 +110,14 @@ public class EventProcessorOptions extends EventHubsOptions {
      */
     public boolean isBatched() {
         return isBatched;
+    }
+
+    /**
+     * Gets the number of eventhubs partition.
+     *
+     * @return The number of eventhubs partition.
+     */
+    public int getPartitionCount() {
+        return partitionCount;
     }
 }

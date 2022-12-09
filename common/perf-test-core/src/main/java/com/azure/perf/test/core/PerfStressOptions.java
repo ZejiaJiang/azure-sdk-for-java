@@ -17,7 +17,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 @JsonPropertyOrder(alphabetic = true)
 public class PerfStressOptions {
     @Parameter(names = { "-d", "--duration" }, description = "duration of test in seconds")
-    private int duration = 10;
+    private int duration = 120;
 
     @Parameter(names = { "--insecure" }, description = "Allow untrusted SSL server certs")
     private boolean insecure = false;

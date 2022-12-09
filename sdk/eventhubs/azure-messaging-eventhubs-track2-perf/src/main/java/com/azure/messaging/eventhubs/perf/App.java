@@ -23,7 +23,8 @@ public class App {
             EventProcessorTest.class,
             GetPartitionInformationTest.class,
             ReactorReceiveEventsTest.class,
-            EventProcessorJedisTest.class
+            EventProcessorJedisTest.class,
+            EventProcessorEventTest.class
         };
 
         PerfStressProgram.run(testClasses, args);
