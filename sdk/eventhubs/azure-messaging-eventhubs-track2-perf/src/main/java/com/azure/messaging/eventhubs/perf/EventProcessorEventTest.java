@@ -19,7 +19,6 @@ public class EventProcessorEventTest extends EventHubEventTest<EventProcessorOpt
     public Mono<Void> setupAsync() {
         return super.setupAsync().then(Mono.defer(() -> {
             processor.start();
-//            return Mono.delay(Duration.ofSeconds(20)).then();
             return completeInitialSignal.asMono();
         }));
     }
